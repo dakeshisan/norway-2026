@@ -23,7 +23,10 @@
   .stat:last-child{border-right:none}
   .stat b{display:block;font-family:'Fraunces',serif;font-weight:900;font-size:18px}
   .stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-  .changed{margin-top:16px;background:#b0852c0e;border:1px solid #b0852c33;border-left:4px solid var(--gold);border-radius:11px;padding:13px 16px;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+  .visa{margin-top:16px;background:#a23b340e;border:1px solid #a23b3440;border-left:5px solid var(--red);border-radius:11px;padding:13px 16px;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+  .visa b{color:var(--ink)}
+  .visa .t{font-family:'Fraunces',serif;font-weight:900;font-size:15px;color:var(--red);margin-bottom:5px}
+  .changed{margin-top:12px;background:#b0852c0e;border:1px solid #b0852c33;border-left:4px solid var(--gold);border-radius:11px;padding:13px 16px;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
   .changed b{color:var(--ink)}
   .changed .t{font-family:'Fraunces',serif;font-weight:900;font-size:15px;color:var(--ink);margin-bottom:5px}
 
@@ -37,15 +40,16 @@
   .stage .body b{color:var(--ink)}
   .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
   .tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#1c2a3110;color:var(--ink-soft)}
-  .tag.show{background:#c2603a1c;color:var(--terracotta)} .tag.unesco{background:#b0852c1f;color:#8a6818} .tag.new{background:#3f7a4f1c;color:var(--green)}
+  .tag.show{background:#c2603a1c;color:var(--terracotta)} .tag.unesco{background:#b0852c1f;color:#8a6818} .tag.new{background:#3f7a4f1c;color:var(--green)} .tag.visa{background:#a23b341c;color:var(--red)}
 
   .days{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px}
   .day{display:grid;grid-template-columns:52px 1fr;gap:0 12px;padding:5px 0;font-size:13px}
   .day .dd{font-family:'Fraunces',serif;font-weight:900;color:var(--sc)}
   .day .dx{color:var(--ink-soft);line-height:1.4}
   .day .dx b{color:var(--ink)}
-  .day .ic{font-weight:700}
   .ther{color:var(--red);font-weight:700}
+  .note{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px;font-size:13px;color:var(--ink-soft);line-height:1.5}
+  .note b{color:var(--ink)}
 
   .navlink{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--teal);text-decoration:none;border-bottom:1px solid #2e6e7340}
   .foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
@@ -53,33 +57,38 @@
 </head>
 <body><div class="wrap">
 
-  <div class="eyebrow">Семейный тур · 12 июня – 17 июля 2026</div>
+  <div class="eyebrow">Семейный тур · 12 июня – 15 июля 2026</div>
   <h1>Летний маршрут — <em>обновлённый</em>.</h1>
-  <p class="sub">Грузия → Крит → Копенгаген → Париж → <b>Норвегия</b> → <b>Исландия</b> → Франкфурт → Алматы. Версия с последними правками по Норвегии и Исландии.</p>
+  <p class="sub">Грузия → Крит → Копенгаген → Париж → <b>Норвегия</b> → <b>Исландия</b> → Франкфурт → Алматы. Версия с последними правками по Норвегии, Исландии и под визу.</p>
   <div class="stats">
-    <div class="stat"><b>36 дней</b><span>12.06–17.07</span></div>
+    <div class="stat"><b>34 дня</b><span>12.06–15.07</span></div>
     <div class="stat"><b>7 стран</b><span>8 этапов</span></div>
     <div class="stat"><b>3 + 1</b><span>взр. + ребёнок 8</span></div>
+  </div>
+
+  <div class="visa">
+    <div class="t">⚠️ Виза Шенген — до 15.07</div>
+    Исландия и Франкфурт — это <b>Шенген</b>, поэтому <b>выезд из зоны (рейс в Алматы) — не позже 15.07.</b> Под это: Норвегия с 3 фьордами кончается 05.07 → <b>Исландию сжимаем до ~9 ночей</b> (05–14.07), Франкфурт 14–15, <b>Алматы 15.07</b> — точно в срок. (Шенген начинается с Крита 15.06 — проверь, что виза действует с ≤15.06.)
   </div>
 
   <div class="changed">
     <div class="t">⚡ Что изменилось</div>
     <b>Норвегия пересобрана:</b> жизнь на природе у фьорда (вид на море + лес) + авто; в Берген — только на утреннюю терапию (26 / 29 / 02); все 3 топ-фьорда — Флом (поезд+катер), Прейкестулен и Гейрангер (перелёты по месту); вылет в Исландию — из Бергена.<br>
-    <b>Исландия и хвост сдвинуты на +1 день</b> (3 фьорда + терапия не влезали в исходное окно): вылет Берген→Рейкьявик <b>05.07</b> (а не 04.07), Кольцо Исландии 05–16.07, Алматы <b>17.07</b>. После Крита ничего не куплено — сдвиг свободный.
+    <b>Хвост подогнан под визу:</b> 3 фьорда сдвинули вылет в Исландию на 05.07, а виза держит выезд 15.07 → Исландия короче на ~2 ночи. Хочешь длиннее Исландию — можно убрать Гейрангер. После Крита ничего не куплено — пересобрать свободно.
   </div>
 
   <!-- 1 Tbilisi -->
   <div class="stage" style="--sc:#C2603A">
     <div class="head"><span class="num">ЭТАП 1</span><h2><span class="flag">🇬🇪</span>Тбилиси</h2><span class="dates">12–15.06 · 3 ночи</span></div>
-    <div class="body">Старый город + Нарикала, серные бани, день в Мцхете (Светицховели, Джвари). Жильё AURA Tbilisi Living. ✅ перелёт и жильё куплены.</div>
+    <div class="body">Старый город + Нарикала, серные бани, день в Мцхете (Светицховели, Джвари). Жильё AURA Tbilisi Living. ✅ перелёт и жильё куплены. <b>Грузия — НЕ Шенген</b> (виза пока не «тикает»).</div>
     <div class="tags"><span class="tag">✅ забронировано</span></div>
   </div>
 
   <!-- 2 Crete -->
   <div class="stage" style="--sc:#2E6E73">
     <div class="head"><span class="num">ЭТАП 2</span><h2><span class="flag">🇬🇷</span>Крит · Ханья</h2><span class="dates">15–18.06 · 3 ночи</span></div>
-    <div class="body">Венецианская гавань, круиз на лагуну <b>Балос</b> + о. Грамвуса, розовый пляж Элафониси. Перелёт через Афины.</div>
-    <div class="tags"><span class="tag unesco">Балос</span><span class="tag">катер + тур</span></div>
+    <div class="body">Венецианская гавань, круиз на лагуну <b>Балос</b> + о. Грамвуса, розовый пляж Элафониси. Перелёт через Афины. <b>Здесь начинается Шенген (15.06)</b> — отсчёт визы.</div>
+    <div class="tags"><span class="tag unesco">Балос</span><span class="tag visa">старт Шенгена</span></div>
   </div>
 
   <!-- 3 Copenhagen -->
@@ -119,36 +128,27 @@
 
   <!-- 6 Iceland -->
   <div class="stage" style="--sc:#5A6E7C">
-    <div class="head"><span class="num">ЭТАП 6</span><h2><span class="flag">🇮🇸</span>Исландия · Кольцо</h2><span class="dates">05–16.07 · 11 ночей</span></div>
-    <div class="body">Ring Road по часовой. Аренда авто (КЕФ→Акюрейри), последний перелёт Акюрейри→Рейкьявик. <b>Сдвинуто на +1 день</b> от прежнего плана.</div>
-    <div class="days">
-      <div class="day"><div class="dd">05–07</div><div class="dx"><b>Рейкьявик</b> (2н): Голубая лагуна, киты, Hallgrímskirkja, Perlan.</div></div>
-      <div class="day"><div class="dd">07–08</div><div class="dx"><b>Снайфедльснес</b>: Киркьюфедль, Арнарстапи, чёрная церковь Будир.</div></div>
-      <div class="day"><div class="dd">08–09</div><div class="dx"><b>Золотое кольцо</b> (Hella): Тингвеллир, гейзер Строккур, Гюдльфосс, Secret Lagoon.</div></div>
-      <div class="day"><div class="dd">09–11</div><div class="dx"><b>Вик</b> (2н): чёрный пляж Рейнисфьяра, Дирхолаэй (тупики), лошадки.</div></div>
-      <div class="day"><div class="dd">11–13</div><div class="dx"><b>Йёкюльсаурлоун</b> (2н): ледниковая лагуна (зодиак), Бриллиантовый пляж, Скафтафедль.</div></div>
-      <div class="day"><div class="dd">13–14</div><div class="dx"><b>Миватн</b>: Деттифосс, Годафосс, геотермальные бани Mývatn, кратер Крафла.</div></div>
-      <div class="day"><div class="dd">14–15</div><div class="dx"><b>Акюрейри</b>: киты из Хусавика. Сдаём авто.</div></div>
-      <div class="day"><div class="dd">15–16</div><div class="dx"><b>Рейкьявик</b> (перелёт Акюрейри→RVK): Sky Lagoon. Утром 16-го — KEF.</div></div>
-    </div>
-    <div class="tags"><span class="tag new">сдвиг +1 день</span><span class="tag">🚗 Ring Road</span><span class="tag unesco">Тингвеллир</span></div>
+    <div class="head"><span class="num">ЭТАП 6</span><h2><span class="flag">🇮🇸</span>Исландия · Кольцо</h2><span class="dates">05–14.07 · ~9 ночей</span></div>
+    <div class="body">Ring Road по часовой. Аренда авто (КЕФ→Акюрейри), последний перелёт Акюрейри→Рейкьявик. <b>Сжато под визу</b> (выезд из Шенгена 15.07) — на ~2 ночи короче прежнего.</div>
+    <div class="note">Тот же круг: <b>Рейкьявик · Снайфедльснес · Золотое кольцо · Вик · Йёкюльсаурлоун · Миватн · Акюрейри</b> (Голубая лагуна, гейзер Строккур, Гюдльфосс, чёрный пляж Рейнисфьяра, ледниковая лагуна, водопады, киты, геотермальные бани). Чтобы влезть в ~9 ночей — укоротим 1–2 «лишние» вторые ночи (обычно Вик / Йёкюльсаурлоун). Какие именно — решим вместе.</div>
+    <div class="tags"><span class="tag visa">сжато под визу</span><span class="tag">🚗 Ring Road</span><span class="tag unesco">Тингвеллир</span></div>
   </div>
 
   <!-- 7 Frankfurt -->
   <div class="stage" style="--sc:#7E7263">
-    <div class="head"><span class="num">ЭТАП 7</span><h2><span class="flag">🇩🇪</span>Франкфурт</h2><span class="dates">16–17.07 · 1 ночь</span></div>
-    <div class="body">Транзит. ✈ Рейкьявик→Франкфурт (бизнес). Sheraton у аэропорта, по желанию прогулка по Рёмербергу.</div>
-    <div class="tags"><span class="tag">транзит</span></div>
+    <div class="head"><span class="num">ЭТАП 7</span><h2><span class="flag">🇩🇪</span>Франкфурт</h2><span class="dates">14–15.07 · 1 ночь</span></div>
+    <div class="body">Транзит. ✈ Рейкьявик→Франкфурт 14.07 (бизнес). Sheraton у аэропорта; вылет в Алматы — утром 15.07, поэтому ночь только <b>14–15</b> (не позже — виза).</div>
+    <div class="tags"><span class="tag visa">ночь 14–15</span></div>
   </div>
 
   <!-- 8 Almaty -->
   <div class="stage" style="--sc:#1C2A31">
-    <div class="head"><span class="num">ЭТАП 8</span><h2><span class="flag">🇰🇿</span>Алматы</h2><span class="dates">17.07 · домой</span></div>
-    <div class="body">✈ Франкфурт→Алматы (бизнес, flat-bed). Конец тура. <b>На день позже прежнего (16→17.07)</b> из-за норвежских фьордов.</div>
-    <div class="tags"><span class="tag">✈ бизнес</span></div>
+    <div class="head"><span class="num">ЭТАП 8</span><h2><span class="flag">🇰🇿</span>Алматы</h2><span class="dates">15.07 · домой</span></div>
+    <div class="body">✈ Франкфурт→Алматы (бизнес, flat-bed) <b>15.07</b> — выезд из Шенгена точно в срок визы (до 15.07). Конец тура.</div>
+    <div class="tags"><span class="tag visa">выезд из Шенгена 15.07</span></div>
   </div>
 
   <div class="foot">
-    Обновлено 14.06.2026 · даты Норвегии — черновик под слоты клиники (гибкость ±1 день); Исландия и возврат сдвинуты на +1 день и пока не забронированы. Личная поездка. Фьорды и жильё — отдельные страницы.
+    Обновлено 14.06.2026 · виза Шенген до 15.07 → выезд не позже 15.07 (Исландия и Франкфурт — Шенген). Даты Норвегии — черновик под слоты клиники (±1 день); Исландия сжата до ~9 ночей; возврат пока не забронирован. Личная поездка.
   </div>
 </div></body></html>
