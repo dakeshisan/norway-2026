@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Евротур 2026 — по дням</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,900;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F4EFE6;--card:#FFFBF2;--ink:#1C2A31;--ink-soft:#3C4A50;--muted:#7E7263;--line:#D9CFBE;
+    --terracotta:#C2603A;--teal:#2E6E73;--gold:#B0852C;--green:#3F7A4F;--red:#A23B34;--ice:#5A6E7C;--paris:#33414E;
+    --shadow:0 1px 0 rgba(28,42,49,.04),0 14px 38px -22px rgba(28,42,49,.45)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(circle at 1px 1px,rgba(28,42,49,.04) 1px,transparent 0);background-size:22px 22px}
+  .wrap{max-width:820px;margin:0 auto;padding:28px 16px 50px}
+  .eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:10px}
+  h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(28px,6.5vw,48px);line-height:.97;letter-spacing:-.02em}
+  h1 em{font-style:italic;font-weight:500;color:var(--teal)}
+  .sub{margin-top:12px;font-size:15.5px;color:var(--ink-soft)} .sub b{color:var(--ink)}
+  .visa{margin-top:14px;background:#a23b340e;border:1px solid #a23b3440;border-left:5px solid var(--red);border-radius:11px;padding:11px 15px;font-size:13px;color:var(--ink-soft);line-height:1.5}
+  .visa b{color:var(--ink)}
+  .legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;font-size:12px;color:var(--ink-soft)}
+  .legend span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+
+  .stage-h{margin:26px 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--sc,var(--ink));padding-bottom:6px}
+  .stage-h .fl{font-size:20px}
+  .stage-h h2{font-family:'Fraunces',serif;font-weight:900;font-size:20px;flex:1;min-width:120px;color:var(--ink)}
+  .stage-h .meta{font-size:12px;font-weight:700;color:var(--muted)}
+  .book{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px}
+  .book.ok{background:#3f7a4f1c;color:var(--green)} .book.no{background:#a23b3416;color:var(--red)} .book.home{background:#5a6e7c1c;color:var(--ice)}
+
+  .day{display:grid;grid-template-columns:54px 1fr;gap:0 12px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .day:last-child{border-bottom:none}
+  .dcol{text-align:center;padding-top:2px}
+  .dnum{font-family:'Fraunces',serif;font-weight:900;font-size:20px;line-height:1;color:var(--sc,var(--ink))}
+  .dmo{font-size:10px;color:var(--muted);text-transform:uppercase}
+  .dwd{font-size:10px;color:var(--muted);margin-top:1px}
+  .dbody{min-width:0}
+  .dloc{font-family:'Fraunces',serif;font-weight:900;font-size:15.5px;letter-spacing:-.01em}
+  .dloc .arr{color:var(--terracotta);font-style:normal;padding:0 3px}
+  .dact{font-size:13px;color:var(--ink-soft);margin-top:3px;line-height:1.4}
+  .dact b{color:var(--ink)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .wx{font-size:11.5px;font-weight:600;color:var(--ice);background:#5a6e7c12;border:1px solid #5a6e7c2a;border-radius:999px;padding:2px 8px}
+  .bed{font-size:11.5px;font-weight:700;color:var(--teal);background:#2e6e7314;border:1px solid #2e6e7333;border-radius:999px;padding:2px 8px}
+  .bed.same{color:var(--muted);background:#7e726312;border-color:var(--line)}
+  .bed.friends{color:var(--paris);background:#33414e12;border-color:#33414e2a}
+  .bed.move{color:var(--terracotta);background:#c2603a14;border-color:#c2603a33}
+  .tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#b0852c1c;color:#8a6818}
+  .tag.th{background:#a23b3318;color:var(--red)}
+  .foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
+  a.nav{color:var(--teal);font-weight:600;text-decoration:none;border-bottom:1px solid #2e6e7340}
+</style>
+</head>
+<body><div class="wrap">
+
+  <div class="eyebrow">Семейный тур · 12 июня – 15 июля 2026 · по дням</div>
+  <h1>Каждый день — <em>где, что, где спать</em>.</h1>
+  <p class="sub">Полная раскладка по дням: маршрут, погода (типичная для сезона — <b>не прогноз</b>), что смотрим и <b>🛏 в каком городе ночуем</b> — чтобы понимать, где бронировать.</p>
+  <div class="visa">🔴 <b>Виза Шенген до 15.07.</b> Шенген начинается на Крите 15.06 → должна действовать 15.06–15.07. Выезд из зоны (Алматы) — 15.07, не позже.</div>
+  <div class="legend">
+    <span>🛏 — где ночуем (что бронировать)</span>
+    <span>🏥 — терапия (утро)</span>
+    <span>☀️🌤⛅🌦🌧🌬 — погода</span>
+    <span>→ переезд</span>
+  </div>
+
+  <!-- TBILISI -->
+  <div class="stage-h" style="--sc:#C2603A"><span class="fl">🇬🇪</span><h2>Тбилиси</h2><span class="meta">12–15.06 · 3 ночи</span><span class="book ok">✅ забронировано</span></div>
+  <div class="day" style="--sc:#C2603A"><div class="dcol"><div class="dnum">12</div><div class="dmo">июн</div><div class="dwd">Пт</div></div><div class="dbody"><div class="dloc">Тбилиси · прилёт</div><div class="dact">Прилёт из Алматы. Старый город, Абанотубани (серные бани), Нарикала.</div><div class="chips"><span class="wx">☀️ 30°</span><span class="bed">🛏 Тбилиси</span></div></div></div>
+  <div class="day" style="--sc:#C2603A"><div class="dcol"><div class="dnum">13</div><div class="dmo">июн</div><div class="dwd">Сб</div></div><div class="dbody"><div class="dloc">Тбилиси</div><div class="dact">Проспект Руставели, канатка, Мтацминда; вино и хинкали.</div><div class="chips"><span class="wx">☀️ 31°</span><span class="bed same">🛏 Тбилиси</span></div></div></div>
+  <div class="day" style="--sc:#C2603A"><div class="dcol"><div class="dnum">14</div><div class="dmo">июн</div><div class="dwd">Вс</div></div><div class="dbody"><div class="dloc">Мцхета (день из Тбилиси)</div><div class="dact">Светицховели + Джвари с водителем; назад в Тбилиси.</div><div class="chips"><span class="wx">⛅ 29°</span><span class="bed same">🛏 Тбилиси</span></div></div></div>
+
+  <!-- CRETE -->
+  <div class="stage-h" style="--sc:#2E6E73"><span class="fl">🇬🇷</span><h2>Крит · Ханья</h2><span class="meta">15–18.06 · 3 ночи · старт Шенгена</span><span class="book no">⬜ бронировать</span></div>
+  <div class="day" style="--sc:#2E6E73"><div class="dcol"><div class="dnum">15</div><div class="dmo">июн</div><div class="dwd">Пн</div></div><div class="dbody"><div class="dloc">Тбилиси <span class="arr">→</span> Ханья</div><div class="dact">Перелёт через Афины. Вечер — Венецианская гавань.</div><div class="chips"><span class="wx">☀️ 27°</span><span class="bed move">🛏 Ханья (Крит)</span></div></div></div>
+  <div class="day" style="--sc:#2E6E73"><div class="dcol"><div class="dnum">16</div><div class="dmo">июн</div><div class="dwd">Вт</div></div><div class="dbody"><div class="dloc">Лагуна Балос</div><div class="dact">Круиз на Балос + о. Грамвуса (целый день).</div><div class="chips"><span class="wx">☀️ 28°</span><span class="bed same">🛏 Ханья</span></div></div></div>
+  <div class="day" style="--sc:#2E6E73"><div class="dcol"><div class="dnum">17</div><div class="dmo">июн</div><div class="dwd">Ср</div></div><div class="dbody"><div class="dloc">Элафониси</div><div class="dact">Розовый пляж Элафониси (тур/авто), отдых.</div><div class="chips"><span class="wx">☀️ 28°</span><span class="bed same">🛏 Ханья</span></div></div></div>
+
+  <!-- PARIS / COPENHAGEN -->
+  <div class="stage-h" style="--sc:#33414E"><span class="fl">🇫🇷</span><h2>Париж (+ Копенгаген)</h2><span class="meta">18–25.06</span><span class="book home">🏠 у друзей</span></div>
+  <div class="day" style="--sc:#33414E"><div class="dcol"><div class="dnum">18</div><div class="dmo">июн</div><div class="dwd">Чт</div></div><div class="dbody"><div class="dloc">Ханья <span class="arr">→</span> Париж</div><div class="dact">Перелёт через Афины. Заселение у друзей.</div><div class="chips"><span class="wx">⛅ 24°</span><span class="bed friends">🛏 Париж (друзья)</span></div></div></div>
+  <div class="day" style="--sc:#A23B34"><div class="dcol"><div class="dnum">19</div><div class="dmo">июн</div><div class="dwd">Пт</div></div><div class="dbody"><div class="dloc">🇩🇰 Париж <span class="arr">→</span> Копенгаген</div><div class="dact"><b>The Weeknd</b> (Parken). Только 2 взрослых; ребёнок у друзей.</div><div class="chips"><span class="wx">⛅ 20°</span><span class="bed move">🛏 Копенгаген (1 ночь)</span><span class="tag">🎤 концерт</span></div></div></div>
+  <div class="day" style="--sc:#33414E"><div class="dcol"><div class="dnum">20</div><div class="dmo">июн</div><div class="dwd">Сб</div></div><div class="dbody"><div class="dloc">Копенгаген <span class="arr">→</span> Париж</div><div class="dact">Утром Нюхавн/Тиволи; вечером назад в Париж.</div><div class="chips"><span class="wx">⛅ 23°</span><span class="bed friends">🛏 Париж (друзья)</span></div></div></div>
+  <div class="day" style="--sc:#33414E"><div class="dcol"><div class="dnum">21</div><div class="dmo">июн</div><div class="dwd">Вс</div></div><div class="dbody"><div class="dloc">Париж · Cité des Enfants</div><div class="dact">Музей науки для детей; Эйфелева + кораблик. Bruno Mars 21.06 — опция.</div><div class="chips"><span class="wx">🌤 25°</span><span class="bed friends">🛏 Париж</span><span class="tag">🎤 Bruno Mars (опц.)</span></div></div></div>
+  <div class="day" style="--sc:#33414E"><div class="dcol"><div class="dnum">22</div><div class="dmo">июн</div><div class="dwd">Пн</div></div><div class="dbody"><div class="dloc">Mont-Saint-Michel (день)</div><div class="dact">TGV Montparnasse→Ренн + шаттл; аббатство-остров.</div><div class="chips"><span class="wx">🌤 24°</span><span class="bed friends">🛏 Париж</span></div></div></div>
+  <div class="day" style="--sc:#33414E"><div class="dcol"><div class="dnum">23</div><div class="dmo">июн</div><div class="dwd">Вт</div></div><div class="dbody"><div class="dloc">Parc Astérix (день)</div><div class="dact">Парк аттракционов (RER B + шаттл).</div><div class="chips"><span class="wx">☀️ 26°</span><span class="bed friends">🛏 Париж</span><span class="tag">🎢 парк</span></div></div></div>
+  <div class="day" style="--sc:#33414E"><div class="dcol"><div class="dnum">24</div><div class="dmo">июн</div><div class="dwd">Ср</div></div><div class="dbody"><div class="dloc">Париж · зоопарк Венсен</div><div class="dact">Зоопарк, прогулки; сборы перед Норвегией.</div><div class="chips"><span class="wx">🌤 25°</span><span class="bed friends">🛏 Париж</span></div></div></div>
+
+  <!-- NORWAY -->
+  <div class="stage-h" style="--sc:#3F7A4F"><span class="fl">🇳🇴</span><h2>Норвегия · Берген + фьорды</h2><span class="meta">25.06–04.07 · переезды</span><span class="book no">⬜ бронировать</span></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">25</div><div class="dmo">июн</div><div class="dwd">Чт</div></div><div class="dbody"><div class="dloc">Париж <span class="arr">→</span> Берген</div><div class="dact">Прямой рейс (вечер). Берём авто → на природную базу у фьорда.</div><div class="chips"><span class="wx">🌧 16°</span><span class="bed move">🛏 База A · Бьёрна-фьорд/Ос</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">26</div><div class="dmo">июн</div><div class="dwd">Пт</div></div><div class="dbody"><div class="dloc">Берген (терапия) + природа</div><div class="dact"><b>🏥 Терапия 1</b> утром в Бергене (≤45 мин). День — у воды/лес.</div><div class="chips"><span class="wx">🌦 16°</span><span class="bed same">🛏 База A</span><span class="tag th">🏥 терапия 1</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">27</div><div class="dmo">июн</div><div class="dwd">Сб</div></div><div class="dbody"><div class="dloc">Флом · Нерёй-фьорд</div><div class="dact">Поезд + круиз по Нерёй-фьорду (ЮНЕСКО). Фломская ж/д.</div><div class="chips"><span class="wx">🌦 17°</span><span class="bed move">🛏 Флом (1 ночь)</span><span class="tag">фьорд ЮНЕСКО</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">28</div><div class="dmo">июн</div><div class="dwd">Вс</div></div><div class="dbody"><div class="dloc">Флом <span class="arr">→</span> База B</div><div class="dact">Stegastein / Аурландс-фьорд → переезд на базу B (Остерёй или Сотра).</div><div class="chips"><span class="wx">⛅ 18°</span><span class="bed move">🛏 База B · Остерёй/Сотра</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">29</div><div class="dmo">июн</div><div class="dwd">Пн</div></div><div class="dbody"><div class="dloc">Берген (терапия) + природа</div><div class="dact"><b>🏥 Терапия 2</b> утром. День — на базе B / у воды.</div><div class="chips"><span class="wx">🌧 16°</span><span class="bed same">🛏 База B</span><span class="tag th">🏥 терапия 2</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">30</div><div class="dmo">июн</div><div class="dwd">Вт</div></div><div class="dbody"><div class="dloc">Берген <span class="arr">→</span> Ставангер</div><div class="dact">Перелёт (45 мин). Гамле-Ставангер, отдых перед хайком.</div><div class="chips"><span class="wx">⛅ 17°</span><span class="bed move">🛏 Ставангер (1 ночь)</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">01</div><div class="dmo">июл</div><div class="dwd">Ср</div></div><div class="dbody"><div class="dloc">Прейкестулен <span class="arr">→</span> База C</div><div class="dact"><b>Хайк Прейкестулен</b> (~4 ч) утром; вечером рейс назад → база C у Бергена.</div><div class="chips"><span class="wx">🌦 16°</span><span class="bed move">🛏 База C · близкий фьорд</span><span class="tag">🥾 хайк</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">02</div><div class="dmo">июл</div><div class="dwd">Чт</div></div><div class="dbody"><div class="dloc">Берген (терапия) + природа</div><div class="dact"><b>🏥 Терапия 3</b> утром. День спокойно на базе C.</div><div class="chips"><span class="wx">🌧 16°</span><span class="bed same">🛏 База C</span><span class="tag th">🏥 терапия 3</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">03</div><div class="dmo">июл</div><div class="dwd">Пт</div></div><div class="dbody"><div class="dloc">Хардангер-фьорд (день, авто)</div><div class="dact">Водопады (Стейнсдалсфоссен/Вёрингсфоссен), без перелёта. Последняя ночь.</div><div class="chips"><span class="wx">🌦 17°</span><span class="bed same">🛏 База C</span><span class="tag">3-й фьорд</span></div></div></div>
+  <div class="day" style="--sc:#3F7A4F"><div class="dcol"><div class="dnum">04</div><div class="dmo">июл</div><div class="dwd">Сб</div></div><div class="dbody"><div class="dloc">Берген <span class="arr">→</span> Рейкьявик</div><div class="dact">Прямой рейс (утро). Сдаём норвежское авто. → Исландия.</div><div class="chips"><span class="wx">⛅ 15°</span><span class="bed move">🛏 Рейкьявик</span></div></div></div>
+
+  <!-- ICELAND -->
+  <div class="stage-h" style="--sc:#5A6E7C"><span class="fl">🇮🇸</span><h2>Исландия · Кольцо</h2><span class="meta">04–14.07 · ~10 ночей</span><span class="book no">⬜ бронировать</span></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">04</div><div class="dmo">июл</div><div class="dwd">Сб</div></div><div class="dbody"><div class="dloc">Рейкьявик · прилёт</div><div class="dact">Берём авто (КЕФ→Акюрейри). Голубая лагуна по пути / город.</div><div class="chips"><span class="wx">🌥 12°</span><span class="bed move">🛏 Рейкьявик</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">05</div><div class="dmo">июл</div><div class="dwd">Вс</div></div><div class="dbody"><div class="dloc">Рейкьявик</div><div class="dact">Киты, Hallgrímskirkja, Perlan; полуостров Рейкьянес.</div><div class="chips"><span class="wx">🌬 13°</span><span class="bed same">🛏 Рейкьявик</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">06</div><div class="dmo">июл</div><div class="dwd">Пн</div></div><div class="dbody"><div class="dloc">Рейкьявик <span class="arr">→</span> Снайфедльснес</div><div class="dact">Киркьюфедль, Арнарстапи, чёрная церковь Будир (~2,5 ч).</div><div class="chips"><span class="wx">⛅ 12°</span><span class="bed move">🛏 Снайфедльснес</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">07</div><div class="dmo">июл</div><div class="dwd">Вт</div></div><div class="dbody"><div class="dloc">→ Золотое кольцо (Хедла)</div><div class="dact">Тингвеллир, гейзер Строккур, Гюдльфосс, Secret Lagoon.</div><div class="chips"><span class="wx">🌦 12°</span><span class="bed move">🛏 Хедла / Сельфосс</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">08</div><div class="dmo">июл</div><div class="dwd">Ср</div></div><div class="dbody"><div class="dloc">→ Вик</div><div class="dact">Водопады Сельяландсфосс, Скоугафосс по пути; ферма-помидоры.</div><div class="chips"><span class="wx">🌬 12°</span><span class="bed move">🛏 Вик</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">09</div><div class="dmo">июл</div><div class="dwd">Чт</div></div><div class="dbody"><div class="dloc">Вик</div><div class="dact">Чёрный пляж Рейнисфьяра, Дирхолаэй (тупики), лошадки.</div><div class="chips"><span class="wx">⛅ 13°</span><span class="bed same">🛏 Вик</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">10</div><div class="dmo">июл</div><div class="dwd">Пт</div></div><div class="dbody"><div class="dloc">→ Йёкюльсаурлоун / Хёбн</div><div class="dact">Каньон Фьядрарглйуфур, Скафтафедль (Свартифосс) по пути.</div><div class="chips"><span class="wx">🌦 11°</span><span class="bed move">🛏 Йёкюльсаурлоун</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">11</div><div class="dmo">июл</div><div class="dwd">Сб</div></div><div class="dbody"><div class="dloc">Ледниковая лагуна</div><div class="dact">Зодиак среди айсбергов + Бриллиантовый пляж.</div><div class="chips"><span class="wx">🌥 12°</span><span class="bed same">🛏 Йёкюльсаурлоун</span><span class="tag">айсберги</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">12</div><div class="dmo">июл</div><div class="dwd">Вс</div></div><div class="dbody"><div class="dloc">→ Миватн</div><div class="dact">Деттифосс, Намафьядль, кратер Крафла; геотермальные бани Миватн.</div><div class="chips"><span class="wx">🌬 11°</span><span class="bed move">🛏 Миватн</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">13</div><div class="dmo">июл</div><div class="dwd">Пн</div></div><div class="dbody"><div class="dloc">→ Акюрейри</div><div class="dact">Годафосс; киты из Хусавика (~95% встреч). Сдаём авто.</div><div class="chips"><span class="wx">⛅ 13°</span><span class="bed move">🛏 Акюрейри</span></div></div></div>
+  <div class="day" style="--sc:#5A6E7C"><div class="dcol"><div class="dnum">14</div><div class="dmo">июл</div><div class="dwd">Вт</div></div><div class="dbody"><div class="dloc">Акюрейри <span class="arr">→</span> Рейкьявик <span class="arr">→</span> Франкфурт</div><div class="dact">Внутр. перелёт + KEF→Франкфурт (бизнес). Длинный день в пути.</div><div class="chips"><span class="wx">🌦 12°</span><span class="bed move">🛏 Франкфурт</span></div></div></div>
+
+  <!-- FRANKFURT / HOME -->
+  <div class="stage-h" style="--sc:#7E7263"><span class="fl">🇩🇪</span><h2>Франкфурт → Алматы</h2><span class="meta">14–15.07</span><span class="book no">⬜ Франкфурт</span></div>
+  <div class="day" style="--sc:#7E7263"><div class="dcol"><div class="dnum">15</div><div class="dmo">июл</div><div class="dwd">Ср</div></div><div class="dbody"><div class="dloc">Франкфурт <span class="arr">→</span> Алматы</div><div class="dact">Бизнес (flat-bed). <b>Выезд из Шенгена 15.07 — в срок визы.</b> Конец тура.</div><div class="chips"><span class="wx">☀️ 24°</span><span class="bed home">🏠 домой</span></div></div></div>
+
+  <div class="foot">
+    Обновлено 14.06.2026 · погода — типичная для сезона, не прогноз (точный смотреть на yr.no за ~неделю). Даты Норвегии — черновик под слоты клиники (±1 день). Норвегия: 5 заездов (База A · Флом · База B · Ставангер · База C) — варианты жилья и цены в мастер-документе. Исландия и возврат держатся за визу 15.07. Личная поездка.<br>
+    <a class="nav" href="index.html">← Маршрут (обзор)</a> · <a class="nav" href="fjords.html">Фото фьордов</a>
+  </div>
+</div></body></html>
