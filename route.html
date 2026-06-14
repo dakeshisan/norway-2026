@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Летний тур 2026 — обновлённый маршрут</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,900;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F4EFE6;--card:#FFFBF2;--ink:#1C2A31;--ink-soft:#3C4A50;--muted:#7E7263;--line:#D9CFBE;
+    --terracotta:#C2603A;--teal:#2E6E73;--gold:#B0852C;--green:#3F7A4F;--red:#A23B34;--ice:#5A6E7C;--paris:#33414E;
+    --shadow:0 1px 0 rgba(28,42,49,.04),0 14px 38px -22px rgba(28,42,49,.45)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(circle at 1px 1px,rgba(28,42,49,.04) 1px,transparent 0);background-size:22px 22px}
+  .wrap{max-width:760px;margin:0 auto;padding:30px 18px 50px}
+  .eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:11px}
+  h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(30px,7vw,52px);line-height:.96;letter-spacing:-.02em}
+  h1 em{font-style:italic;font-weight:500;color:var(--teal)}
+  .sub{margin-top:13px;font-size:16px;color:var(--ink-soft)}
+  .sub b{color:var(--ink)}
+  .stats{display:flex;flex-wrap:wrap;gap:0;margin-top:20px;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff8ec70}
+  .stat{flex:1 1 33%;padding:12px 14px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-family:'Fraunces',serif;font-weight:900;font-size:18px}
+  .stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .changed{margin-top:16px;background:#b0852c0e;border:1px solid #b0852c33;border-left:4px solid var(--gold);border-radius:11px;padding:13px 16px;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+  .changed b{color:var(--ink)}
+  .changed .t{font-family:'Fraunces',serif;font-weight:900;font-size:15px;color:var(--ink);margin-bottom:5px}
+
+  .stage{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px 18px;box-shadow:var(--shadow);border-left:5px solid var(--sc,var(--ink))}
+  .stage .head{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .stage .num{font-family:'Fraunces',serif;font-weight:900;font-size:13px;color:var(--sc,var(--ink))}
+  .stage h2{font-family:'Fraunces',serif;font-weight:900;font-size:21px;letter-spacing:-.01em;flex:1;min-width:140px}
+  .stage .dates{font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+  .stage .flag{font-size:.85em;margin-right:5px}
+  .stage .body{font-size:14px;color:var(--ink-soft);margin-top:8px;line-height:1.5}
+  .stage .body b{color:var(--ink)}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#1c2a3110;color:var(--ink-soft)}
+  .tag.show{background:#c2603a1c;color:var(--terracotta)} .tag.unesco{background:#b0852c1f;color:#8a6818} .tag.new{background:#3f7a4f1c;color:var(--green)}
+
+  .days{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px}
+  .day{display:grid;grid-template-columns:52px 1fr;gap:0 12px;padding:5px 0;font-size:13px}
+  .day .dd{font-family:'Fraunces',serif;font-weight:900;color:var(--sc)}
+  .day .dx{color:var(--ink-soft);line-height:1.4}
+  .day .dx b{color:var(--ink)}
+  .day .ic{font-weight:700}
+  .ther{color:var(--red);font-weight:700}
+
+  .navlink{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--teal);text-decoration:none;border-bottom:1px solid #2e6e7340}
+  .foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6}
+</style>
+</head>
+<body><div class="wrap">
+
+  <div class="eyebrow">Семейный тур · 12 июня – 17 июля 2026</div>
+  <h1>Летний маршрут — <em>обновлённый</em>.</h1>
+  <p class="sub">Грузия → Крит → Копенгаген → Париж → <b>Норвегия</b> → <b>Исландия</b> → Франкфурт → Алматы. Версия с последними правками по Норвегии и Исландии.</p>
+  <div class="stats">
+    <div class="stat"><b>36 дней</b><span>12.06–17.07</span></div>
+    <div class="stat"><b>7 стран</b><span>8 этапов</span></div>
+    <div class="stat"><b>3 + 1</b><span>взр. + ребёнок 8</span></div>
+  </div>
+
+  <div class="changed">
+    <div class="t">⚡ Что изменилось</div>
+    <b>Норвегия пересобрана:</b> жизнь на природе у фьорда (вид на море + лес) + авто; в Берген — только на утреннюю терапию (26 / 29 / 02); все 3 топ-фьорда — Флом (поезд+катер), Прейкестулен и Гейрангер (перелёты по месту); вылет в Исландию — из Бергена.<br>
+    <b>Исландия и хвост сдвинуты на +1 день</b> (3 фьорда + терапия не влезали в исходное окно): вылет Берген→Рейкьявик <b>05.07</b> (а не 04.07), Кольцо Исландии 05–16.07, Алматы <b>17.07</b>. После Крита ничего не куплено — сдвиг свободный.
+  </div>
+
+  <!-- 1 Tbilisi -->
+  <div class="stage" style="--sc:#C2603A">
+    <div class="head"><span class="num">ЭТАП 1</span><h2><span class="flag">🇬🇪</span>Тбилиси</h2><span class="dates">12–15.06 · 3 ночи</span></div>
+    <div class="body">Старый город + Нарикала, серные бани, день в Мцхете (Светицховели, Джвари). Жильё AURA Tbilisi Living. ✅ перелёт и жильё куплены.</div>
+    <div class="tags"><span class="tag">✅ забронировано</span></div>
+  </div>
+
+  <!-- 2 Crete -->
+  <div class="stage" style="--sc:#2E6E73">
+    <div class="head"><span class="num">ЭТАП 2</span><h2><span class="flag">🇬🇷</span>Крит · Ханья</h2><span class="dates">15–18.06 · 3 ночи</span></div>
+    <div class="body">Венецианская гавань, круиз на лагуну <b>Балос</b> + о. Грамвуса, розовый пляж Элафониси. Перелёт через Афины.</div>
+    <div class="tags"><span class="tag unesco">Балос</span><span class="tag">катер + тур</span></div>
+  </div>
+
+  <!-- 3 Copenhagen -->
+  <div class="stage" style="--sc:#A23B34">
+    <div class="head"><span class="num">ЭТАП 3</span><h2><span class="flag">🇩🇰</span>Копенгаген</h2><span class="dates">19–20.06 · 1 ночь</span></div>
+    <div class="body">Концерт <b>The Weeknd</b> 19.06 (Parken). Нюхавн, Тиволи. Ребёнок — у друзей в Париже. Вечером 20.06 назад в Париж.</div>
+    <div class="tags"><span class="tag show">🎤 The Weeknd 19.06</span></div>
+  </div>
+
+  <!-- 4 Paris -->
+  <div class="stage" style="--sc:#33414E">
+    <div class="head"><span class="num">ЭТАП 4</span><h2><span class="flag">🇫🇷</span>Париж · у друзей</h2><span class="dates">18, 20–25.06</span></div>
+    <div class="body">Cité des Enfants, Эйфелева + Сена, зоопарк Венсен, <b>Parc Astérix</b>, <b>Mont-Saint-Michel</b> поездом TGV. Bruno Mars 21.06 — опция. 25.06 прямой рейс в Берген.</div>
+    <div class="tags"><span class="tag">🎢 Parc Astérix</span><span class="tag unesco">Mont-Saint-Michel</span><span class="tag show">Bruno Mars (опц.)</span></div>
+  </div>
+
+  <!-- 5 Norway -->
+  <div class="stage" style="--sc:#3F7A4F">
+    <div class="head"><span class="num">ЭТАП 5</span><h2><span class="flag">🇳🇴</span>Норвегия · Берген + фьорды</h2><span class="dates">25.06–05.07 · 10 ночей</span></div>
+    <div class="body"><b>База на природе у фьорда</b> (вид на море + лес) + аренда авто. В Берген — только на <span class="ther">утреннюю терапию (4 ч)</span> 26 / 29 / 02. Все 3 главных фьорда. Даты — черновик под слоты клиники (гибкость ±1 день).</div>
+    <div class="days">
+      <div class="day"><div class="dd">25</div><div class="dx">Прилёт Париж→Берген, берём авто → <b>база на природе</b>. 🌲</div></div>
+      <div class="day"><div class="dd">26</div><div class="dx"><span class="ther">🏥 Терапия 1</span> (утро) → день на природе. 🌲</div></div>
+      <div class="day"><div class="dd">27</div><div class="dx"><b>Флом · Нерёй-фьорд</b> — поезд + круиз (ЮНЕСКО). Ночь во Фломе. 🚆🚢</div></div>
+      <div class="day"><div class="dd">28</div><div class="dx">Аурланд / Stegastein / Согне-фьорд → назад на базу. 🌲</div></div>
+      <div class="day"><div class="dd">29</div><div class="dx"><span class="ther">🏥 Терапия 2</span> (утро) → база / Хардангер рядом. 🌲</div></div>
+      <div class="day"><div class="dd">30</div><div class="dx">✈ Перелёт в <b>Ставангер</b>. Гамле-Ставангер. ✈</div></div>
+      <div class="day"><div class="dd">01</div><div class="dx"><b>Прейкестулен</b> (хайк ~4 ч), вечером назад в Берген. 🥾</div></div>
+      <div class="day"><div class="dd">02</div><div class="dx"><span class="ther">🏥 Терапия 3</span> (утро) → ✈ перелёт в <b>Олесунн</b> (Гейрангер). ✈</div></div>
+      <div class="day"><div class="dd">03</div><div class="dx"><b>Гейрангер-фьорд</b> — «Семь сестёр», Орлиная дорога (ЮНЕСКО). 🏔</div></div>
+      <div class="day"><div class="dd">04</div><div class="dx">Олесунн → Берген. Ночь-буфер перед вылетом. 🏙</div></div>
+      <div class="day"><div class="dd">05</div><div class="dx">✈ <b>Берген → Рейкьявик</b> (прямой). → Исландия.</div></div>
+    </div>
+    <div class="tags"><span class="tag new">пересобрано</span><span class="tag unesco">Нерёй · Гейрангер</span><span class="tag">🚗 авто + перелёты</span></div>
+    <a class="navlink" href="fjords.html">📸 Фото фьордов — выбрать →</a>
+  </div>
+
+  <!-- 6 Iceland -->
+  <div class="stage" style="--sc:#5A6E7C">
+    <div class="head"><span class="num">ЭТАП 6</span><h2><span class="flag">🇮🇸</span>Исландия · Кольцо</h2><span class="dates">05–16.07 · 11 ночей</span></div>
+    <div class="body">Ring Road по часовой. Аренда авто (КЕФ→Акюрейри), последний перелёт Акюрейри→Рейкьявик. <b>Сдвинуто на +1 день</b> от прежнего плана.</div>
+    <div class="days">
+      <div class="day"><div class="dd">05–07</div><div class="dx"><b>Рейкьявик</b> (2н): Голубая лагуна, киты, Hallgrímskirkja, Perlan.</div></div>
+      <div class="day"><div class="dd">07–08</div><div class="dx"><b>Снайфедльснес</b>: Киркьюфедль, Арнарстапи, чёрная церковь Будир.</div></div>
+      <div class="day"><div class="dd">08–09</div><div class="dx"><b>Золотое кольцо</b> (Hella): Тингвеллир, гейзер Строккур, Гюдльфосс, Secret Lagoon.</div></div>
+      <div class="day"><div class="dd">09–11</div><div class="dx"><b>Вик</b> (2н): чёрный пляж Рейнисфьяра, Дирхолаэй (тупики), лошадки.</div></div>
+      <div class="day"><div class="dd">11–13</div><div class="dx"><b>Йёкюльсаурлоун</b> (2н): ледниковая лагуна (зодиак), Бриллиантовый пляж, Скафтафедль.</div></div>
+      <div class="day"><div class="dd">13–14</div><div class="dx"><b>Миватн</b>: Деттифосс, Годафосс, геотермальные бани Mývatn, кратер Крафла.</div></div>
+      <div class="day"><div class="dd">14–15</div><div class="dx"><b>Акюрейри</b>: киты из Хусавика. Сдаём авто.</div></div>
+      <div class="day"><div class="dd">15–16</div><div class="dx"><b>Рейкьявик</b> (перелёт Акюрейри→RVK): Sky Lagoon. Утром 16-го — KEF.</div></div>
+    </div>
+    <div class="tags"><span class="tag new">сдвиг +1 день</span><span class="tag">🚗 Ring Road</span><span class="tag unesco">Тингвеллир</span></div>
+  </div>
+
+  <!-- 7 Frankfurt -->
+  <div class="stage" style="--sc:#7E7263">
+    <div class="head"><span class="num">ЭТАП 7</span><h2><span class="flag">🇩🇪</span>Франкфурт</h2><span class="dates">16–17.07 · 1 ночь</span></div>
+    <div class="body">Транзит. ✈ Рейкьявик→Франкфурт (бизнес). Sheraton у аэропорта, по желанию прогулка по Рёмербергу.</div>
+    <div class="tags"><span class="tag">транзит</span></div>
+  </div>
+
+  <!-- 8 Almaty -->
+  <div class="stage" style="--sc:#1C2A31">
+    <div class="head"><span class="num">ЭТАП 8</span><h2><span class="flag">🇰🇿</span>Алматы</h2><span class="dates">17.07 · домой</span></div>
+    <div class="body">✈ Франкфурт→Алматы (бизнес, flat-bed). Конец тура. <b>На день позже прежнего (16→17.07)</b> из-за норвежских фьордов.</div>
+    <div class="tags"><span class="tag">✈ бизнес</span></div>
+  </div>
+
+  <div class="foot">
+    Обновлено 14.06.2026 · даты Норвегии — черновик под слоты клиники (гибкость ±1 день); Исландия и возврат сдвинуты на +1 день и пока не забронированы. Личная поездка. Фьорды и жильё — отдельные страницы.
+  </div>
+</div></body></html>
